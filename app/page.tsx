@@ -1,11 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import logoImg from "@/public/img/logo/white_logo.svg";
-import Image from "next/image";
-import PlusIcon from "@/components/Icon";
-import { Icon } from "@iconify/react";
 import Navbar from "@/components/layout/main/Navbar";
 import Hero from "@/components/section/homeSection/Hero";
 import BorderLine from "@/components/section/common/BorderLine";
@@ -16,8 +11,7 @@ import Footer from "@/components/layout/main/Footer";
 import Contact from "@/components/section/homeSection/Contact";
 
 export default function Home() {
-  const [isDark, setIsDark] = useState(true);
-  const [activeSection, setActiveSection] = useState("");
+  const [isDark] = useState(true);
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
@@ -30,7 +24,6 @@ export default function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate-fade-in-up");
-            setActiveSection(entry.target.id);
           }
         });
       },
@@ -43,10 +36,6 @@ export default function Home() {
 
     return () => observer.disconnect();
   }, []);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
