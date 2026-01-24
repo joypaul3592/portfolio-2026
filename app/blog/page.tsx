@@ -6,6 +6,7 @@ import BorderLine from "@/components/section/common/BorderLine";
 import Link from "next/link";
 import { blogs } from "@/lib/blog-data";
 import { Icon } from "@iconify/react";
+import ScrollGradient from "@/components/layout/common/ScrollGradient";
 
 export default function BlogListingPage() {
   return (
@@ -63,7 +64,7 @@ export default function BlogListingPage() {
         <Footer />
       </main>
 
-      <div className="fixed bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none"></div>
+      <ScrollGradient />
     </div>
   );
 }

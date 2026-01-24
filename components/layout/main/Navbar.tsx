@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky border-b top-0 z-10 bg-background/50 backdrop-blur-md  ">
-      <div className="max-w-4xl mx-auto px-5 relative border-x border-border py-2.5">
+      <div className="max-w-4xl mx-auto px-5 sm:px-10 relative border-x border-border py-2.5">
         <div className="flex items-center justify-between gap-5 ">
           <Link href="/">
             <Image
@@ -78,6 +78,7 @@ export default function Navbar() {
                 href="https://github.com/joypaul3592"
                 target="_blank"
                 className="group size-8 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300 cursor-pointer flex items-center justify-center"
+                aria-label="GitHub Profile"
               >
                 <Icon
                   icon="lucide:github"

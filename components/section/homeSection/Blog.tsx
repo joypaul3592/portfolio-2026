@@ -14,7 +14,7 @@ export default function Blog() {
         </Link>
       </div>
 
-      <div className="grid gap-5 p-5 lg:grid-cols-2">
+      <div className="grid gap-5 p-5 sm:px-10 lg:grid-cols-2">
         {blogs.slice(0, 4).map((post) => (
           <Link
             key={post.slug}

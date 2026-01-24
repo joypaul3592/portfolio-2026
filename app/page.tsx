@@ -7,8 +7,10 @@ import BorderLine from "@/components/section/common/BorderLine";
 import About from "@/components/section/homeSection/About";
 import Experience from "@/components/section/homeSection/Experience";
 import Blog from "@/components/section/homeSection/Blog";
+import Projects from "@/components/section/homeSection/Projects";
 import Footer from "@/components/layout/main/Footer";
 import Contact from "@/components/section/homeSection/Contact";
+import ScrollGradient from "@/components/layout/common/ScrollGradient";
 
 export default function Home() {
   const [isDark] = useState(true);
@@ -41,14 +43,14 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground relative">
       <Navbar />
       <main className="max-w-4xl mx-auto  border border-t-0 relative">
-        {/* Line Border */}
         <BorderLine />
         <Hero />
         <BorderLine />
-
         <About />
         <BorderLine />
         <Experience />
+        <BorderLine />
+        <Projects limit={2} />
         <BorderLine />
         <Blog />
         <BorderLine />
@@ -56,8 +58,7 @@ export default function Home() {
         <BorderLine />
         <Footer />
       </main>
-
-      <div className="fixed bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none"></div>
+      <ScrollGradient />
     </div>
   );
 }

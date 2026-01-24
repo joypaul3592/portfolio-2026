@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="sm:px-10 px-5 sm:py-10 py-5">
+    <footer className="sm:px-10 px-5 py-5">
       <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
         <div className="text-sm text-muted-foreground font-mono">
           © {currentYear} <span className="text-foreground">Joy Paul</span>. All

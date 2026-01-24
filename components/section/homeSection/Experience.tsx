@@ -1,7 +1,11 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import { EXPERIENCES } from "@/lib/data";
+import Link from "next/link";
 
 export default function Experience() {
+  const displayedExperiences = EXPERIENCES.slice(0, 3);
+
   return (
     <section className="border-b">
       <div className="flex items-center justify-between gap-5 sm:px-10 px-5 py-1.5 border-b">
@@ -12,57 +16,7 @@ export default function Experience() {
       </div>
 
       <div className="divide-y divide-border">
-        {[
-          {
-            year: "2026",
-            role: "Lead Frontend Developer",
-            company: "Sparrowan",
-            description:
-              "Building and maintaining scalable high performance web applications using modern technologies including React Nextjs and Typescript.",
-            tech: ["React.js", "Next.js", "TypeScript"],
-            current: true,
-          },
-          {
-            year: "2025",
-            role: "Frontend Developer",
-            company: "brandTech",
-            description:
-              "Developing responsive and user friendly web interfaces while delivering clean code and optimizing performance for better usability.",
-            tech: ["React.js", "Next.js", "TypeScript"],
-          },
-          {
-            year: "2024",
-            role: "Frontend Developer",
-            company: "BongoBrain",
-            description:
-              "Contributing to core frontend development by building reusable components and ensuring seamless integration with various backend services.",
-            tech: ["React.js", "Next.js", "TypeScript"],
-          },
-          {
-            year: "2023",
-            role: "Frontend Developer",
-            company: "IshQool",
-            description:
-              "Developed interactive EdTech platforms and bidding marketplaces while ensuring high performance across multiple modern web browser environments.",
-            tech: ["React.js", "Next.js"],
-          },
-          {
-            year: "2023",
-            role: "Frontend Developer",
-            company: "Pi Technology BD",
-            description:
-              "Worked as remote developer focused on MERN stack frontend architecture and collaborating with modern cross-functional agile teams.",
-            tech: ["React.js", "Next.js", "MERN Stack"],
-          },
-          {
-            year: "2022",
-            role: "React Developer",
-            company: "NonAcademy",
-            description:
-              "Started professional journey as frontend intern focused on React fundamentals component architecture and state management for projects.",
-            tech: ["React.js", "JavaScript", "CSS3"],
-          },
-        ].map((job, index) => (
+        {displayedExperiences.map((job, index) => (
           <div
             key={index}
             className="group relative grid lg:grid-cols-12 sm:gap-8 gap-5 sm:p-10 p-5 hover:bg-muted/30 transition-all duration-500 ease-in-out rounded-md"
@@ -117,6 +71,21 @@ export default function Experience() {
           </div>
         ))}
       </div>
+
+      {EXPERIENCES.length > 3 && (
+        <div className="p-5 flex justify-center bg-border/20 border-t">
+          <Link
+            href="/projects"
+            className="group flex items-center gap-2 px-6 py-3 rounded-full border border-border hover:border-foreground/30 hover:bg-foreground/5 transition-all duration-300"
+          >
+            <span className="text-sm font-medium">See more</span>
+            <Icon
+              icon="lucide:arrow-right"
+              className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+            />
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

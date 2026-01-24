@@ -8,6 +8,7 @@ import { useParams, useRouter } from "next/navigation";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Image from "next/image";
+import ScrollGradient from "@/components/layout/common/ScrollGradient";
 
 export default function BlogDetailsPage() {
   const { slug } = useParams();
@@ -147,7 +148,7 @@ export default function BlogDetailsPage() {
         <Footer />
       </main>
 
-      <div className="fixed bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none"></div>
+      <ScrollGradient />
     </div>
   );
 }
