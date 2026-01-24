@@ -57,7 +57,7 @@ export default function Contact() {
                   icon="lucide:mail"
                   className="w-6 h-6 text-muted-foreground group-hover:text-foreground"
                 />
-                <span className="text-lg sm:text-2xl font-light">
+                <span className="text-lg sm:text-xl font-light">
                   joypaul3592@gmail.com
                 </span>
                 <Icon
