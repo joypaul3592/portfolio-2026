@@ -5,7 +5,7 @@ export default function Blog() {
   return (
     <section className="border-b">
       <div className="flex items-center justify-between border-b sm:px-10 px-5 py-1.5">
-        <h2 className="text-3xl font-medium">Recent Blog</h2>
+        <h2 className="sm:text-3xl text-2xl font-medium">Recent Blog</h2>
         <Link
           href="/blog"
           className="text-sm text-muted-foreground hover:text-foreground transition-colors font-mono uppercase tracking-widest"

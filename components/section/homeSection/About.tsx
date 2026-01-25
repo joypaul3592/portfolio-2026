@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 export default function About() {
   return (
     <section className="border-b">
-      <h2 className="text-3xl font-medium border-b sm:px-10 px-5 py-1.5">
+      <h2 className="sm:text-3xl text-2xl font-medium border-b sm:px-10 px-5 py-1.5">
         About us
       </h2>
 

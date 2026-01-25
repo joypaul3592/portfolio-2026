@@ -24,7 +24,7 @@ export default function ProjectsPage() {
         <BorderLine />
 
         {/* Page Header */}
-        <div className="sm:p-10 p-5 border-b space-y-4">
+        <div className="sm:p-10 p-5 border-b sm:space-y-4 space-y-2">
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-4"
@@ -32,10 +32,11 @@ export default function ProjectsPage() {
             <Icon icon="lucide:arrow-left" className="w-4 h-4" />
             Back to Home
           </Link>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Full Portfolio
+
+          <h1 className="sm:text-5xl text-3xl font-light tracking-tight">
+            All Projects
           </h1>
-          <p className="text-muted-foreground max-w-2xl text-lg">
+          <p className="text-muted-foreground sm:text-lg max-w-xl">
             A comprehensive list of projects and professional experience
             I&apos;ve gained over the years.
           </p>
@@ -44,7 +45,9 @@ export default function ProjectsPage() {
         {/* Full Experience Section */}
         <section className="border-b">
           <div className="flex items-center justify-between gap-5 sm:px-10 px-5 py-4 border-b bg-muted/5">
-            <h2 className="text-2xl font-semibold">All Experience</h2>
+            <h2 className="sm:text-2xl text-xl font-semibold">
+              All Experience
+            </h2>
             <span className="text-xs font-mono text-muted-foreground">
               ({EXPERIENCES.length})
             </span>
