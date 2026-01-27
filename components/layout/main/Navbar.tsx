@@ -1,3 +1,4 @@
+"use client";
 import PlusIcon from "@/components/Icon";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
@@ -5,19 +6,16 @@ import whiteImg from "@/public/img/logo/white_logo.svg";
 import blackImg from "@/public/img/logo/black_logo.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
 
   const [isDark, setIsDark] = useState(true);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDark);
-  }, [isDark]);
-
   const toggleTheme = () => {
     setIsDark(!isDark);
+    document.documentElement.classList.toggle("dark");
   };
 
   return (
@@ -29,6 +27,7 @@ export default function Navbar() {
               src={isDark ? whiteImg : blackImg}
               alt="logo"
               className="w-16"
+              priority
             />
           </Link>
 

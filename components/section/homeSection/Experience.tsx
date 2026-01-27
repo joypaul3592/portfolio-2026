@@ -77,6 +77,7 @@ export default function Experience() {
           <Link
             href="/projects"
             className="group flex items-center gap-2 px-6 py-3 rounded-full border border-border hover:border-foreground/30 hover:bg-foreground/5 transition-all duration-300"
+            aria-label="See more projects and case studies"
           >
             <span className="text-sm font-medium">See more</span>
             <Icon

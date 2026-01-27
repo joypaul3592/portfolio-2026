@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/layout/main/Navbar";
 import Hero from "@/components/section/homeSection/Hero";
 import BorderLine from "@/components/section/common/BorderLine";
@@ -13,36 +10,10 @@ import Contact from "@/components/section/homeSection/Contact";
 import ScrollGradient from "@/components/layout/common/ScrollGradient";
 
 export default function Home() {
-  const [isDark] = useState(true);
-  const sectionsRef = useRef<(HTMLElement | null)[]>([]);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDark);
-  }, [isDark]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in-up");
-          }
-        });
-      },
-      { threshold: 0.3, rootMargin: "0px 0px -20% 0px" },
-    );
-
-    sectionsRef.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <Navbar />
-      <main className="max-w-4xl mx-auto  border border-t-0 relative">
+      <main className="max-w-4xl mx-auto border border-t-0 relative">
         <BorderLine />
         <Hero />
         <BorderLine />

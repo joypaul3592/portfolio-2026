@@ -63,6 +63,7 @@ export default function Hero() {
                   width={450}
                   height={450}
                   className="size-full object-cover"
+                  priority
                 />
               </div>
             </div>
