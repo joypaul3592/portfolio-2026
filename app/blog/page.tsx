@@ -15,9 +15,11 @@ export default function BlogListingPage() {
       <main className="max-w-4xl mx-auto border border-t-0 relative bg-card/10">
         <BorderLine />
 
-        <div className="sm:p-10 p-5 space-y-4 border-b">
-          <h1 className="text-5xl font-light tracking-tight">Writing</h1>
-          <p className="text-muted-foreground text-lg max-w-xl">
+        <div className="sm:p-10 p-5 sm:space-y-4 space-y-2 border-b">
+          <h1 className="sm:text-5xl text-3xl font-light tracking-tight">
+            All Blogs
+          </h1>
+          <p className="text-muted-foreground sm:text-lg max-w-xl">
             Thoughts on frontend architecture, user experience, and the craft of
             building for the web.
           </p>

@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className="sticky border-b top-0 z-10 bg-background/50 backdrop-blur-md  ">
       <div className="max-w-4xl mx-auto px-5 sm:px-10 relative border-x border-border py-2.5">
         <div className="flex items-center justify-between gap-5 ">
-          <Link href="/">
+          <Link href="/" className="sm:block hidden">
             <Image
               src={isDark ? whiteImg : blackImg}
               alt="logo"
@@ -31,7 +31,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="flex items-center justify-between gap-5">
+          <div className="flex items-center justify-between gap-5 flex-1 sm:flex-0">
             {[
               { name: "Portfolio", path: "/" },
               { name: "Component", path: "https://no-ui.vercel.app" },
@@ -88,10 +88,10 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="absolute  -left-[0.49rem] -bottom-[0.49rem] ">
+        <div className="absolute  -left-[0.49rem] -bottom-[0.49rem] sm:block hidden ">
           <PlusIcon />
         </div>
-        <div className="absolute  -right-[0.49rem] -bottom-[0.49rem] ">
+        <div className="absolute  -right-[0.49rem] -bottom-[0.49rem] sm:block hidden">
           <PlusIcon />
         </div>
       </div>

@@ -9,7 +9,7 @@ export default function Experience() {
   return (
     <section className="border-b">
       <div className="flex items-center justify-between gap-5 sm:px-10 px-5 py-1.5 border-b">
-        <h2 className="text-3xl font-medium">Experience</h2>
+        <h2 className="sm:text-3xl text-2xl font-medium">Experience</h2>
         <div className="text-sm text-muted-foreground font-mono">
           2022 — 2026
         </div>
@@ -26,15 +26,6 @@ export default function Experience() {
                 <span className="lg:hidden w-2 h-2 rounded-full bg-foreground/20" />
                 {job.year}
               </div>
-              {job.current && (
-                <div className="mt-2 text-[10px] font-bold uppercase tracking-widest text-emerald-500 flex items-center gap-1.5">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                  </span>
-                  Latest
-                </div>
-              )}
             </div>
 
             <div className="lg:col-span-6 space-y-4">
