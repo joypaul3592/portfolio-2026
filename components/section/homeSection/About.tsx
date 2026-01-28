@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Icon } from "@iconify/react";
+import { CompressIcon } from "@/components/Icons";
 
 export default function About() {
   return (
@@ -10,8 +10,8 @@ export default function About() {
 
       <div className="space-y-4 text-muted-foreground leading-relaxed p-5 sm:p-10">
         <div className="flex gap-3">
-          <Icon
-            icon="uil:compress-point"
+          <CompressIcon
+            size={16}
             className="text-foreground mt-1.5 w-4 h-4 flex-shrink-0"
           />
           <p>
@@ -22,8 +22,8 @@ export default function About() {
         </div>
 
         <div className="flex gap-3">
-          <Icon
-            icon="uil:compress-point"
+          <CompressIcon
+            size={16}
             className="text-foreground mt-1.5 w-4 h-4 flex-shrink-0"
           />
           <p>
@@ -39,8 +39,8 @@ export default function About() {
         </div>
 
         <div className="flex gap-3">
-          <Icon
-            icon="uil:compress-point"
+          <CompressIcon
+            size={16}
             className="text-foreground mt-1.5 w-4 h-4 flex-shrink-0"
           />
           <p>
@@ -58,8 +58,8 @@ export default function About() {
         </div>
 
         <div className="flex gap-3">
-          <Icon
-            icon="uil:compress-point"
+          <CompressIcon
+            size={16}
             className="text-foreground mt-1.5 w-4 h-4 flex-shrink-0"
           />
           <p>
@@ -70,8 +70,8 @@ export default function About() {
         </div>
 
         <div className="flex gap-3">
-          <Icon
-            icon="uil:compress-point"
+          <CompressIcon
+            size={16}
             className="text-foreground mt-1.5 w-4 h-4 flex-shrink-0"
           />
           <p>

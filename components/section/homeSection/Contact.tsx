@@ -1,6 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { Icon } from "@iconify/react";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  MailIcon,
+  PhoneIcon,
+  ArrowUpRightIcon,
+} from "@/components/Icons";
 
 export default function Contact() {
   const socials = [
@@ -8,25 +14,25 @@ export default function Contact() {
       name: "GitHub",
       handle: "joypaul3592",
       url: "https://github.com/joypaul3592",
-      icon: "lucide:github",
+      Icon: GithubIcon,
     },
     {
       name: "LinkedIn",
       handle: "joypaul3592",
       url: "https://www.linkedin.com/in/joypaul3592/",
-      icon: "lucide:linkedin",
+      Icon: LinkedinIcon,
     },
     {
       name: "Email",
       handle: "joypaul3592@gmail.com",
       url: "mailto:joypaul3592@gmail.com",
-      icon: "lucide:mail",
+      Icon: MailIcon,
     },
     {
       name: "Phone",
       handle: "01732023548",
       url: "tel:01732023548",
-      icon: "lucide:phone",
+      Icon: PhoneIcon,
     },
   ];
 
@@ -53,15 +59,15 @@ export default function Contact() {
                 href="mailto:joypaul3592@gmail.com"
                 className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300 w-fit"
               >
-                <Icon
-                  icon="lucide:mail"
-                  className="w-6 h-6 text-muted-foreground group-hover:text-foreground"
+                <MailIcon
+                  size={24}
+                  className="w-6 h-6 mt-1 text-muted-foreground group-hover:text-foreground"
                 />
                 <span className="text-lg sm:text-xl font-light">
                   joypaul3592@gmail.com
                 </span>
-                <Icon
-                  icon="lucide:arrow-up-right"
+                <ArrowUpRightIcon
+                  size={20}
                   className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-all -translate-y-1"
                 />
               </Link>
@@ -83,12 +89,12 @@ export default function Contact() {
                 className="group p-5 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-300 hover:bg-muted/30"
               >
                 <div className="flex items-center justify-between mb-3">
-                  <Icon
-                    icon={social.icon}
+                  <social.Icon
+                    size={20}
                     className="w-5 h-5 text-muted-foreground group-hover:text-foreground"
                   />
-                  <Icon
-                    icon="lucide:arrow-up-right"
+                  <ArrowUpRightIcon
+                    size={16}
                     className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all"
                   />
                 </div>

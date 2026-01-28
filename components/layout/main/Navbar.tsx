@@ -1,6 +1,5 @@
 "use client";
-import PlusIcon from "@/components/Icon";
-import { Icon } from "@iconify/react";
+import { PlusIcon, GithubIcon, MoonIcon, SunIcon } from "@/components/Icons";
 import Image from "next/image";
 import whiteImg from "@/public/img/logo/white_logo.svg";
 import blackImg from "@/public/img/logo/black_logo.svg";
@@ -57,18 +56,14 @@ export default function Navbar() {
                 aria-label="Toggle theme"
               >
                 {isDark ? (
-                  <Icon
-                    icon="lucide:sun"
+                  <SunIcon
                     className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                    width="12"
-                    height="12"
+                    size={12}
                   />
                 ) : (
-                  <Icon
-                    icon="lucide:moon"
+                  <MoonIcon
                     className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                    width="12"
-                    height="12"
+                    size={12}
                   />
                 )}
               </button>
@@ -79,9 +74,9 @@ export default function Navbar() {
                 className="group size-8 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300 cursor-pointer flex items-center justify-center"
                 aria-label="GitHub Profile"
               >
-                <Icon
-                  icon="lucide:github"
+                <GithubIcon
                   className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
+                  size={16}
                 />
               </Link>
             </div>

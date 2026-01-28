@@ -5,7 +5,7 @@ import Footer from "@/components/layout/main/Footer";
 import BorderLine from "@/components/section/common/BorderLine";
 import { blogs } from "@/lib/blog-data";
 import { useParams, useRouter } from "next/navigation";
-import { Icon } from "@iconify/react";
+import { ArrowLeftIcon, ShareIcon, BookmarkIcon } from "@/components/Icons";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollGradient from "@/components/layout/common/ScrollGradient";
@@ -38,10 +38,10 @@ export default function BlogDetailsPage() {
         <div className="sm:p-10 p-5 space-y-5 border-b">
           <button
             onClick={() => router.back()}
-            className="group flex items-center gap-2 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors uppercase tracking-widest"
+            className="group flex items-center gap-2 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors uppercase tracking-widest cursor-pointer"
           >
-            <Icon
-              icon="lucide:arrow-left"
+            <ArrowLeftIcon
+              size={12}
               className="w-3 h-3 transition-transform group-hover:-translate-x-1"
             />
             Back to Writing
@@ -135,10 +135,10 @@ export default function BlogDetailsPage() {
             </div>
             <div className="flex gap-2.5">
               <button className="text-muted-foreground hover:text-foreground transition-colors border size-8 center rounded-lg cursor-pointer hover:border-muted ">
-                <Icon icon="lucide:share-2" className="size-4" />
+                <ShareIcon size={16} className="size-4" />
               </button>
               <button className="text-muted-foreground hover:text-foreground transition-colors  border size-8 center rounded-lg cursor-pointer hover:border-muted ">
-                <Icon icon="lucide:bookmark" className="size-4" />
+                <BookmarkIcon size={16} className="size-4" />
               </button>
             </div>
           </div>

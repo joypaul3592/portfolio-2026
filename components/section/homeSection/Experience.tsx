@@ -1,5 +1,4 @@
-import React from "react";
-import { Icon } from "@iconify/react";
+import { ArrowUpRightIcon, ArrowRightIcon } from "@/components/Icons";
 import { EXPERIENCES } from "@/lib/data";
 import Link from "next/link";
 
@@ -19,7 +18,7 @@ export default function Experience() {
         {displayedExperiences.map((job, index) => (
           <div
             key={index}
-            className="group relative grid lg:grid-cols-12 sm:gap-8 gap-5 sm:p-10 p-5 hover:bg-muted/30 transition-all duration-500 ease-in-out rounded-md"
+            className="group relative grid lg:grid-cols-12 sm:gap-8 gap-5 sm:p-10 p-5 hover:bg-muted/30 transition-all duration-500 ease-in-out"
           >
             <div className="lg:col-span-2 relative">
               <div className="text-xl sm:text-2xl font-light text-muted-foreground group-hover:text-foreground transition-colors duration-500 flex items-center gap-3">
@@ -34,8 +33,8 @@ export default function Experience() {
                   <h3 className="text-lg sm:text-xl font-medium tracking-tight">
                     {job.role}
                   </h3>
-                  <Icon
-                    icon="lucide:arrow-up-right"
+                  <ArrowUpRightIcon
+                    size={16}
                     className="opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all text-muted-foreground w-4 h-4"
                   />
                 </div>
@@ -68,11 +67,11 @@ export default function Experience() {
           <Link
             href="/projects"
             className="group flex items-center gap-2 px-6 py-3 rounded-full border border-border hover:border-foreground/30 hover:bg-foreground/5 transition-all duration-300"
-            aria-label="See more projects and case studies"
+            aria-label="See more Experience"
           >
-            <span className="text-sm font-medium">See more</span>
-            <Icon
-              icon="lucide:arrow-right"
+            <span className="text-sm font-medium">View Experience</span>
+            <ArrowRightIcon
+              size={16}
               className="w-4 h-4 group-hover:translate-x-1 transition-transform"
             />
           </Link>

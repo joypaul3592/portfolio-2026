@@ -37,7 +37,7 @@ export default function Hero() {
               className="group relative mx-auto  overflow-hidden"
             >
               {/* Frame with corner decorations */}
-              <div className="aspect-[9/3] absolute inset-0 -top-20 z-10 m-auto h-8 sm:h-12 border border-emerald-300/15 bg-emerald-300/15 overflow-hidden">
+              <div className="aspect-[9/3] absolute inset-0 sm:-top-24 -top-36 z-10 m-auto h-12 border border-emerald-300/15 bg-emerald-300/15 overflow-hidden">
                 <span className="absolute -left-px -top-px block size-2.5 rounded-tl border-l-[1.5px] border-t-[1.5px] border-emerald-300/70 scale-125 blur-[3px]"></span>
                 <span className="absolute -right-px -top-px block size-2.5 rounded-tr border-r-[1.5px] border-t-[1.5px] border-emerald-300/70 scale-125 blur-[3px]"></span>
                 <span className="absolute -bottom-px -left-px block size-2.5 rounded-bl border-b-[1.5px] border-l-[1.5px] border-emerald-300/70 scale-125 blur-[3px]"></span>

@@ -4,8 +4,8 @@ import Navbar from "@/components/layout/main/Navbar";
 import Projects from "@/components/section/homeSection/Projects";
 import Footer from "@/components/layout/main/Footer";
 import BorderLine from "@/components/section/common/BorderLine";
+import { ArrowLeftIcon } from "@/components/Icons";
 import { useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { EXPERIENCES } from "@/lib/data";
 import ScrollGradient from "@/components/layout/common/ScrollGradient";
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
             href="/"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-4"
           >
-            <Icon icon="lucide:arrow-left" className="w-4 h-4" />
+            <ArrowLeftIcon size={16} className="w-4 h-4" />
             Back to Home
           </Link>
 

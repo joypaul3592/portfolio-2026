@@ -5,7 +5,7 @@ import Footer from "@/components/layout/main/Footer";
 import BorderLine from "@/components/section/common/BorderLine";
 import Link from "next/link";
 import { blogs } from "@/lib/blog-data";
-import { Icon } from "@iconify/react";
+import { ArrowRightIcon } from "@/components/Icons";
 import ScrollGradient from "@/components/layout/common/ScrollGradient";
 
 export default function BlogListingPage() {
@@ -52,8 +52,8 @@ export default function BlogListingPage() {
               <div className="lg:col-span-2 flex items-start lg:justify-end">
                 <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground group-hover:text-emerald-500 transition-colors">
                   Read
-                  <Icon
-                    icon="lucide:arrow-right"
+                  <ArrowRightIcon
+                    size={12}
                     className="w-3 h-3 translate-y-[-1px]"
                   />
                 </div>
