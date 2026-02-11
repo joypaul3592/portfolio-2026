@@ -115,6 +115,31 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -198,3 +223,45 @@
 .animate-scan {
   animation: scan 3s ease-in-out infinite;
 }
+
+/* Custom Scrollbar Styles */
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Light mode scrollbar */
+::-webkit-scrollbar-thumb {
+  background: oklch(0.708 0 0);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.556 0 0);
+}
+
+/* Dark mode scrollbar - using html.dark for better specificity */
+html.dark ::-webkit-scrollbar-thumb {
+  background: oklch(0.27 0 0);
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.35 0 0);
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(86.995% 0.0001 271.152) transparent;
+}
+
+html.dark {
+  scrollbar-color: oklch(0.27 0 0) transparent;
+}
+
