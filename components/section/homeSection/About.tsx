@@ -4,7 +4,7 @@ import { CompressIcon } from "@/components/Icons";
 export default function About() {
   return (
     <section className="border-b">
-      <h2 className="sm:text-3xl text-2xl font-medium border-b sm:px-10 px-5 py-1.5">
+      <h2 className="sm:text-3xl text-2xl font-medium border-b sm:px-10 px-5 py-3">
         About us
       </h2>
 

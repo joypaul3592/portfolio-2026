@@ -62,7 +62,7 @@ export const blogs: BlogPost[] = [
   },
   {
     slug: "high-performance-animations",
-    title: "The Art of High-Performance Animations: Frame-by-Frame Optimization",
+    title: "The Art of High-Performance Animations: Frame-by-Frame.",
     excerpt: "Animations can make or break your UX. Learn how to achieve 60fps smoothness in complex web apps.",
     date: "Nov 2024",
     readTime: "8 min",

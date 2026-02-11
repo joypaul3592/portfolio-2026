@@ -4,7 +4,7 @@ import { blogs } from "@/lib/blog-data";
 export default function Blog() {
   return (
     <section className="border-b">
-      <div className="flex items-center justify-between border-b sm:px-10 px-5 py-1.5">
+      <div className="flex items-center justify-between border-b sm:px-10 px-5 py-3">
         <h2 className="sm:text-3xl text-2xl font-medium">Recent Blog</h2>
         <Link
           href="/blog"
@@ -19,7 +19,7 @@ export default function Blog() {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="group p-5 sm:p-10 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg cursor-pointer"
+            className="group p-5 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg cursor-pointer"
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between text-xs text-muted-foreground font-mono">

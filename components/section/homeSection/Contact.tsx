@@ -38,7 +38,7 @@ export default function Contact() {
 
   return (
     <section className="border-b" id="connect">
-      <h2 className="sm:text-3xl text-2xl font-medium border-b sm:px-10 px-5 py-1.5">
+      <h2 className="sm:text-3xl text-2xl font-medium border-b sm:px-10 px-5 py-3">
         Contact
       </h2>
       <div className="grid lg:grid-cols-2 gap-10 p-5 sm:p-10">

@@ -14,11 +14,11 @@ export default function Footer() {
       url: "https://www.linkedin.com/in/joypaul3592/",
       label: "LinkedIn",
     },
-    {
-      Icon: FacebookIcon,
-      url: "https://www.facebook.com/joy.paul.466713/",
-      label: "Facebook",
-    },
+    // {
+    //   Icon: FacebookIcon,
+    //   url: "https://www.facebook.com/joy.paul.466713/",
+    //   label: "Facebook",
+    // },
   ];
 
   return (

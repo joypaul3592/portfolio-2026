@@ -35,7 +35,7 @@ export default function Projects({ limit }: { limit?: number }) {
         <h2 className="sm:text-3xl text-2xl font-semibold flex items-center gap-2">
           Projects{" "}
         </h2>
-        <span className="text-xs font-mono text-muted-foreground align-top mb-1">
+        <span className="text-xs font-mono text-muted-foreground align-top">
           ({PROJECTS.length})
         </span>
       </div>

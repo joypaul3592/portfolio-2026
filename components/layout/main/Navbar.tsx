@@ -6,13 +6,16 @@ import blackImg from "@/public/img/logo/black_logo.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useSound } from "@/hooks/useSound";
 
 export default function Navbar() {
   const pathname = usePathname();
 
   const [isDark, setIsDark] = useState(true);
+  const playClick = useSound("/sounds/public_audio_ui-sounds_click.wav");
 
   const toggleTheme = () => {
+    playClick(0.5);
     setIsDark(!isDark);
     document.documentElement.classList.toggle("dark");
   };

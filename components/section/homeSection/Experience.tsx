@@ -7,7 +7,7 @@ export default function Experience() {
 
   return (
     <section className="border-b">
-      <div className="flex items-center justify-between gap-5 sm:px-10 px-5 py-1.5 border-b">
+      <div className="flex items-center justify-between gap-5 sm:px-10 px-5 py-3 border-b">
         <h2 className="sm:text-3xl text-2xl font-medium">Experience</h2>
         <div className="text-sm text-muted-foreground font-mono">
           2022 — 2026
