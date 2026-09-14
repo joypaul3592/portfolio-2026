@@ -20,8 +20,8 @@ export const SITE_INFO = {
  * Theme Colors for Meta Tags
  */
 export const META_THEME_COLORS = {
-  light: "#ffffff",
-  dark: "#0a0a0a",
+  light: "#f9faf0",
+  dark: "#09090b",
 } as const;
 
 /**

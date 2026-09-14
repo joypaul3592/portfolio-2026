@@ -9,29 +9,33 @@ export const USER = {
   displayName: "Joy Paul",
   username: "joypaul3592",
   jobTitle: "Frontend Developer",
-  
+
   // Bio & Description
   bio: "Frontend Developer crafting digital experiences at the intersection of design, technology, and user experience.",
-  
-  longBio: "Frontend Developer with 2+ years of experience, specializing in building scalable, high-performance web applications using modern technologies like React.js, Next.js, and TypeScript.",
-  
+
+  longBio:
+    "Frontend Developer with 2+ years of experience, specializing in building scalable, high-performance web applications using modern technologies like React.js, Next.js, and TypeScript.",
+
   // Location
   location: "Barisal, Bangladesh",
   country: "Bangladesh",
-  
+
   // Contact
   email: "joypaul3592@gmail.com",
   phone: "01732023548",
-  
+
   // Social Links
   github: "https://github.com/joypaul3592",
   linkedin: "https://www.linkedin.com/in/joypaul3592/",
   twitter: "@joypaul3592",
-  
+
   // Images
-  avatar: "/img/hero/joy2.png",
-  ogImage: "/img/hero/joy2.png", // For social media sharing
-  
+  avatar: "/img/hero/joy.png",
+  // Drop a landscape photo in /public/img/hero and point this at it.
+  // Left empty, the hero falls back to a generated gradient cover.
+  cover: "/img/hero/my-cover.png" as string,
+  ogImage: "/img/hero/joy.png", // For social media sharing
+
   // Skills & Keywords for SEO
   keywords: [
     "Joy Paul",
@@ -55,7 +59,7 @@ export const USER = {
     "Modern Web Development",
     "Noui Creator",
   ],
-  
+
   // Tech Stack
   skills: [
     "React.js",
@@ -71,11 +75,12 @@ export const USER = {
     "UI/UX Design",
     "Web Performance",
   ],
-  
+
   // Projects
   featuredProject: {
     name: "Noui",
-    description: "A minimalist UI component library designed for speed and simplicity",
+    description:
+      "A minimalist UI component library designed for speed and simplicity",
     url: "https://no-ui.vercel.app/",
   },
 } as const;

@@ -1,6 +1,4 @@
-import Navbar from "@/components/layout/main/Navbar";
 import Hero from "@/components/section/homeSection/Hero";
-import BorderLine from "@/components/section/common/BorderLine";
 import About from "@/components/section/homeSection/About";
 import Experience from "@/components/section/homeSection/Experience";
 import Blog from "@/components/section/homeSection/Blog";
@@ -12,21 +10,13 @@ import ScrollGradient from "@/components/layout/common/ScrollGradient";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground relative">
-      <Navbar />
-      <main className="max-w-4xl mx-auto border border-t-0 relative">
-        <BorderLine />
+      <main className="max-w-2xl mx-auto relative px-5 pb-20 space-y-14 sm:space-y-16">
         <Hero />
-        <BorderLine />
         <About />
-        <BorderLine />
         <Experience />
-        <BorderLine />
         <Projects limit={2} />
-        <BorderLine />
         <Blog />
-        <BorderLine />
         <Contact />
-        <BorderLine />
         <Footer />
       </main>
       <ScrollGradient />

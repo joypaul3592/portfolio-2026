@@ -1,8 +1,7 @@
 "use client";
 
-import Navbar from "@/components/layout/main/Navbar";
+import StatusBar from "@/components/layout/main/StatusBar";
 import Footer from "@/components/layout/main/Footer";
-import BorderLine from "@/components/section/common/BorderLine";
 import { blogs } from "@/lib/blog-data";
 import { useParams, useRouter } from "next/navigation";
 import { ArrowLeftIcon, ShareIcon, BookmarkIcon } from "@/components/Icons";
@@ -30,12 +29,11 @@ export default function BlogDetailsPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
-      <Navbar />
-      <main className="max-w-4xl mx-auto border border-t-0 relative bg-card/5">
-        <BorderLine />
+      <main className="max-w-2xl mx-auto relative px-5 pt-6 pb-20 bg-card/5">
+        <StatusBar back={{ href: "/", label: "Home" }} />
 
         {/* Header Section */}
-        <div className="sm:p-10 p-5 space-y-5 border-b">
+        <div className="sm:py-10 py-5 space-y-5">
           <button
             onClick={() => router.back()}
             className="group flex items-center gap-2 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors uppercase tracking-widest cursor-pointer"
@@ -63,7 +61,7 @@ export default function BlogDetailsPage() {
         </div>
 
         {/* Content Section */}
-        <div className="sm:p-10 p-5">
+        <div className="sm:py-10 py-5">
           <article className="prose prose-invert prose-lg max-w-none">
             {/* Featured Media (Video or Placeholder) */}
             {blog.videoUrl && (
@@ -114,7 +112,7 @@ export default function BlogDetailsPage() {
         </div>
 
         {/* Footer info (like in the image) */}
-        <div className="sm:px-10 px-5 py-2.5 border-b bg-muted/10 border-t border-border/50">
+        <div className="py-2.5 bg-muted/10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-border/50 overflow-hidden relative">
@@ -144,7 +142,6 @@ export default function BlogDetailsPage() {
           </div>
         </div>
 
-        <BorderLine />
         <Footer />
       </main>
 

@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import { SITE_INFO, META_THEME_COLORS } from "@/config/site";
@@ -10,6 +10,12 @@ const geist = Geist({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-geist",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
 });
 
 export const metadata: Metadata = {
@@ -112,7 +118,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geist.variable} dark`}>
+    <html lang="en" className={`${geist.variable} ${spaceGrotesk.variable} dark`}>
       <body className="font-sans antialiased">
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>

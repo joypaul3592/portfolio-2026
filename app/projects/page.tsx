@@ -1,9 +1,8 @@
 "use client";
 
-import Navbar from "@/components/layout/main/Navbar";
+import StatusBar from "@/components/layout/main/StatusBar";
 import Projects from "@/components/section/homeSection/Projects";
 import Footer from "@/components/layout/main/Footer";
-import BorderLine from "@/components/section/common/BorderLine";
 import { ArrowLeftIcon } from "@/components/Icons";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -19,12 +18,11 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
-      <Navbar />
-      <main className="max-w-4xl mx-auto border border-t-0 relative bg-background">
-        <BorderLine />
+      <main className="max-w-2xl mx-auto relative px-5 pt-6 pb-20 bg-background">
+        <StatusBar back={{ href: "/", label: "Home" }} />
 
         {/* Page Header */}
-        <div className="sm:p-10 p-5 border-b sm:space-y-4 space-y-2">
+        <div className="sm:py-10 py-5 sm:space-y-4 space-y-2">
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-4"
@@ -43,8 +41,8 @@ export default function ProjectsPage() {
         </div>
 
         {/* Full Experience Section */}
-        <section className="border-b">
-          <div className="flex items-center justify-between gap-5 sm:px-10 px-5 py-4 border-b bg-muted/5">
+        <section>
+          <div className="flex items-center justify-between gap-5 py-4 bg-muted/5">
             <h2 className="sm:text-2xl text-xl font-semibold">
               All Experience
             </h2>
@@ -56,7 +54,7 @@ export default function ProjectsPage() {
             {EXPERIENCES.map((job, index) => (
               <div
                 key={index}
-                className="group relative grid lg:grid-cols-12 sm:gap-8 gap-5 sm:p-10 p-5 hover:bg-muted/30 transition-all duration-500 ease-in-out"
+                className="group relative grid lg:grid-cols-12 sm:gap-8 gap-5 sm:py-10 py-5 hover:bg-muted/30 transition-all duration-500 ease-in-out"
               >
                 <div className="lg:col-span-2 relative">
                   <div className="text-xl font-light text-muted-foreground group-hover:text-foreground transition-colors duration-500">
@@ -91,12 +89,10 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        <BorderLine />
 
         {/* All Projects Section */}
         <Projects />
 
-        <BorderLine />
         <Footer />
       </main>
 

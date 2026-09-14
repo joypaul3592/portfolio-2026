@@ -1,74 +1,126 @@
 import Image from "next/image";
+import Link from "next/link";
+import { USER } from "@/config/user";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  MailIcon,
+  ArrowUpRightIcon,
+} from "@/components/Icons";
+
+const links = [
+  { label: "Email", href: `mailto:${USER.email}`, Icon: MailIcon },
+  { label: "GitHub", href: USER.github, Icon: GithubIcon },
+  { label: "LinkedIn", href: USER.linkedin, Icon: LinkedinIcon },
+];
 
 export default function Hero() {
   return (
-    <header className="sm:p-10 p-5 flex items-center border-b">
-      <div className="grid lg:grid-cols-5 gap-5 sm:gap-16 w-full">
-        <div className="lg:col-span-3 space-y-6 sm:space-y-8">
-          <div className="space-y-3 sm:space-y-2">
-            <div className="text-sm text-muted-foreground font-mono tracking-wider">
-              PORTFOLIO / 2026
-            </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight">
-              Joy <span className="text-muted-foreground">Paul</span>
-            </h1>
-          </div>
+    <header>
+      {/* Cover banner — a real photo when USER.cover is set, a gradient otherwise */}
+      <div className="relative left-1/2 h-52 w-[min(90vw-2.5rem,60rem)] -translate-x-1/2 overflow-hidden rounded-xl sm:h-72 lg:h-80 mt-1">
+        {USER.cover ? (
+          <Image
+            src={USER.cover}
+            alt=""
+            fill
+            priority
+            sizes="(max-width: 1152px) 100vw, 1152px"
+            className="object-cover"
+          />
+        ) : (
+          <div aria-hidden="true" className="hero-cover absolute inset-0" />
+        )}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-background/5 to-background/50"
+        />
+      </div>
 
-          <div className="space-y-6 max-w-md">
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-              Frontend Developer crafting digital experiences at the
-              intersection of
-              <span className="text-foreground"> design</span>,
-              <span className="text-foreground"> technology</span>, and
-              <span className="text-foreground"> user experience</span>.
-            </p>
-
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse mt-1"></div>
-              Barisal, Bangladesh
-            </div>
-          </div>
+      {/* Photo card, centred on the cover's edge — a print with its caption */}
+      <div className="relative -mt-24 mx-auto w-64 bg-paper/0 p-1.5 pb-6 text-center sm:-mt-28 sm:w-[21rem] backdrop-blur-[1.5px] ">
+        <div className=" ring-1 ring-paper-edge rounded-lg">
+          <Image
+            src={USER.avatar}
+            alt={`${USER.displayName} — ${USER.jobTitle}`}
+            width={400}
+            height={400}
+            priority
+            className="aspect-square w-full object-cover"
+          />
         </div>
-        {/* Right side - Animated Portrait Card */}
-        <div className="lg:col-span-2 flex flex-col justify-center sm:mt-8 mt-5 lg:mt-0 sm:pl-4">
-          <div className="relative rounded border border-border bg-card/50 backdrop-blur-sm p-1 w-fit">
-            <div
-              aria-hidden="true"
-              className="group relative mx-auto  overflow-hidden"
-            >
-              {/* Frame with corner decorations */}
-              <div className="aspect-[9/3] absolute inset-0 sm:-top-24 -top-36 z-10 m-auto h-12 border border-emerald-300/15 bg-emerald-300/15 overflow-hidden">
-                <span className="absolute -left-px -top-px block size-2.5 rounded-tl border-l-[1.5px] border-t-[1.5px] border-emerald-300/70 scale-125 blur-[3px]"></span>
-                <span className="absolute -right-px -top-px block size-2.5 rounded-tr border-r-[1.5px] border-t-[1.5px] border-emerald-300/70 scale-125 blur-[3px]"></span>
-                <span className="absolute -bottom-px -left-px block size-2.5 rounded-bl border-b-[1.5px] border-l-[1.5px] border-emerald-300/70 scale-125 blur-[3px]"></span>
-                <span className="absolute -bottom-px -right-px block size-2.5 rounded-br border-b-[1.5px] border-r-[1.5px] border-emerald-300/70 scale-125 blur-[3px]"></span>
 
-                {/* Solid corners */}
-                <span className="absolute -left-px -top-px block size-2.5 rounded-tl border-l-[1.5px] border-t-[1.5px] border-emerald-300 z-10"></span>
-                <span className="absolute -right-px -top-px block size-2.5 rounded-tr border-r-[1.5px] border-t-[1.5px] border-emerald-300 z-10"></span>
-                <span className="absolute -bottom-px -left-px block size-2.5 rounded-bl border-b-[1.5px] border-l-[1.5px] border-emerald-300 z-10"></span>
-                <span className="absolute -bottom-px -right-px block size-2.5 rounded-br border-b-[1.5px] border-r-[1.5px] border-emerald-300 z-10"></span>
+        {/* The card's title is the page's heading, now that the big one is gone */}
+        <h1 className="mt-4 font-medium text-[14px] uppercase tracking-[0.12em] text-paper-foreground">
+          {USER.displayName}
+        </h1>
+        <p className="mt-2  text-[12px] leading-[1.6] text-paper-muted px-1">
+          building quiet interfaces for the web — react, next and typescript,
+          from a small city in bangladesh.
+        </p>
+      </div>
 
-                {/* Scanning animation inside frame */}
-                <div className="absolute inset-0 z-20 animate-scan">
-                  <div className="absolute inset-x-0 m-auto h-6 bg-emerald-500 blur-xl"></div>
-                </div>
-              </div>
+      {/* A rule dropping out of the card, tying it to the copy below */}
+      <div
+        aria-hidden="true"
+        className="mx-auto h-20 w-px bg-border sm:h-28"
+      />
 
-              {/* Portrait image - Square */}
-              <div className="aspect-square bg-border/50 transition-opacity rounded-xs overflow-hidden relative z-5 ">
-                <Image
-                  src="/img/hero/joy2.png"
-                  alt="Joy Paul - Frontend Developer"
-                  width={450}
-                  height={450}
-                  className="size-full object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+      <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
+        {USER.jobTitle} — building for the web from {USER.location}.
+      </p>
+
+      <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
+        <p>
+          I like to sit where design and engineering meet — thinking about how
+          an interface looks, feels, and actually works. Mostly{" "}
+          <span className="text-foreground">React</span>,{" "}
+          <span className="text-foreground">Next.js</span> and{" "}
+          <span className="text-foreground">TypeScript</span>, with a soft spot
+          for interaction detail.
+        </p>
+        <p>
+          Currently open to full-time roles and freelance work. The fastest way
+          to reach me is{" "}
+          <Link
+            href={`mailto:${USER.email}`}
+            className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+          >
+            email
+          </Link>
+          , or take a look at{" "}
+          <Link
+            href="/projects"
+            className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+          >
+            what I&rsquo;ve built
+          </Link>
+          .
+        </p>
+      </div>
+
+      <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
+        <span className="size-1.5 animate-pulse rounded-full bg-emerald-500" />
+        Available for new work
+      </div>
+
+      <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
+        {links.map(({ label, href, Icon }) => (
+          <Link
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Icon size={15} className="size-[15px]" />
+            {label}
+            <ArrowUpRightIcon
+              size={12}
+              className="size-3 opacity-0 transition-all duration-300 group-hover:opacity-100"
+            />
+          </Link>
+        ))}
       </div>
     </header>
   );

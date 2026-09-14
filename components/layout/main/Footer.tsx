@@ -1,4 +1,5 @@
-import { GithubIcon, LinkedinIcon, FacebookIcon } from "@/components/Icons";
+import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import ThemeToggle from "@/components/layout/common/ThemeToggle";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,24 +23,25 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="sm:px-10 px-5 py-5">
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
-        <div className="text-sm text-muted-foreground font-mono">
+    <footer className="pt-4">
+      <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+        <div className="text-sm text-muted-foreground">
           © {currentYear} <span className="text-foreground">Joy Paul</span>. All
           rights reserved.
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-5">
+          <ThemeToggle />
           {socialLinks.map((social) => (
             <a
               key={social.label}
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-300"
               aria-label={social.label}
             >
-              <social.Icon size={20} className="w-5 h-5" />
+              <social.Icon size={17} className="size-[17px]" />
             </a>
           ))}
         </div>
