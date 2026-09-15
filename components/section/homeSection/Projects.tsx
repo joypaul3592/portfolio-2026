@@ -2,11 +2,13 @@ import React from "react";
 import Link from "next/link";
 import { PROJECTS } from "@/lib/data";
 import SectionHeading from "@/components/section/common/SectionHeading";
+import VerticalRule from "@/components/section/common/VerticalRule";
 import {
   ArrowRightIcon,
   ArrowUpRightIcon,
   LinkIcon,
   LayersIcon,
+  BookmarkIcon,
   GlobeIcon,
   HomeIcon,
   ShieldIcon,
@@ -15,20 +17,33 @@ import {
 
 const projectIcons: Record<
   string,
-  React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number | string }>
+  React.ComponentType<
+    React.SVGProps<SVGSVGElement> & { size?: number | string }
+  >
 > = {
   layers: LayersIcon,
+  book: BookmarkIcon,
   globe: GlobeIcon,
   home: HomeIcon,
   shield: ShieldIcon,
   flame: FlameIcon,
 };
 
-export default function Projects({ limit }: { limit?: number }) {
+// `rule` is opt-in: the home page threads a hairline between its sections,
+// while /projects renders this component on its own.
+export default function Projects({
+  limit,
+  rule = false,
+}: {
+  limit?: number;
+  rule?: boolean;
+}) {
   const displayed = limit ? PROJECTS.slice(0, limit) : PROJECTS;
 
   return (
     <section id="projects">
+      {rule ? <VerticalRule className="mb-12 h-16 sm:mb-14 sm:h-20" /> : null}
+
       <SectionHeading title="Projects" meta={`${PROJECTS.length} total`} />
 
       <ul className="space-y-6">

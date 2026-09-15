@@ -14,7 +14,7 @@ export const USER = {
   bio: "Frontend Developer crafting digital experiences at the intersection of design, technology, and user experience.",
 
   longBio:
-    "Frontend Developer with 2+ years of experience, specializing in building scalable, high-performance web applications using modern technologies like React.js, Next.js, and TypeScript.",
+    "Frontend Developer with 3+ years of experience, specializing in building scalable, high-performance web applications using modern technologies like React.js, Next.js, and TypeScript.",
 
   // Location
   location: "Barisal, Bangladesh",

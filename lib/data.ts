@@ -52,34 +52,37 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "No UI library",
-    period: "05.2023 — ∞",
-    url: "https://no-ui.vercel.app/",
+    title: "Kipui",
+    // Left blank until the real dates are worth stating — the card simply
+    // omits the range rather than showing a guess.
+    period: "",
+    url: "https://kipui.app/",
     description:
-      "A library of headless, unstyled UI components designed for React and Tailwind CSS, focusing on accessibility and developer flexibility.",
+      "A React component library of twenty-four accessible components for Tailwind CSS v4, shipped as one package with no styling runtime and no provider to wrap the app in.",
     features: [
-      {
-        text: "Natural touch scrolling with smooth inertia effect",
-      },
-      {
-        text: "Mouse drag and scroll support for desktop",
-      },
-      { text: "Infinite loop scrolling" },
-      {
-        text: "Unstyled components for complete style customization",
-      },
-      { text: "Easy installation via shadcn CLI" },
+      { text: "Twenty-four components installed as a single package" },
+      { text: "Focus management, keyboard navigation and ARIA built in" },
+      { text: "Token-based theming: five palettes, light and dark" },
+      { text: "Composed parts, each exported on its own" },
+      { text: "Loading, empty and error states out of the box" },
     ],
-    tags: [
-      "Open Source",
-      "React",
-      "TypeScript",
-      "Monorepo",
-      "Package Publishing",
-      "NPM Registry",
-      "GitHub Actions",
-    ],
+    tags: ["React 19", "TypeScript", "Tailwind CSS v4", "Next.js", "Design System"],
     icon: "layers",
+  },
+  {
+    title: "BunnyBook",
+    period: "",
+    url: "https://bunnybook.vercel.app/",
+    description:
+      "A Bengali-language learning platform where I write about web development — React, Next.js and TypeScript explained in the language most of my readers actually think in.",
+    features: [
+      { text: "Tutorials on React.js, Next.js and TypeScript" },
+      { text: "Written in Bengali, not translated into it" },
+      { text: "Articles on design systems and modern web development" },
+      { text: "A Learn section collecting everything published" },
+    ],
+    tags: ["Next.js", "React", "TypeScript", "Content", "Bengali"],
+    icon: "book",
   },
   {
     title: "RetWho",
@@ -110,6 +113,36 @@ export const PROJECTS = [
       "Data Engineering",
     ],
     icon: "globe",
+  },
+  {
+    title: "No UI library",
+    period: "05.2023 — ∞",
+    url: "https://no-ui.vercel.app/",
+    description:
+      "A library of headless, unstyled UI components designed for React and Tailwind CSS, focusing on accessibility and developer flexibility.",
+    features: [
+      {
+        text: "Natural touch scrolling with smooth inertia effect",
+      },
+      {
+        text: "Mouse drag and scroll support for desktop",
+      },
+      { text: "Infinite loop scrolling" },
+      {
+        text: "Unstyled components for complete style customization",
+      },
+      { text: "Easy installation via shadcn CLI" },
+    ],
+    tags: [
+      "Open Source",
+      "React",
+      "TypeScript",
+      "Monorepo",
+      "Package Publishing",
+      "NPM Registry",
+      "GitHub Actions",
+    ],
+    icon: "layers",
   },
   {
     title: "Nest Ranger",

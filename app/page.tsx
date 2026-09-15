@@ -1,7 +1,7 @@
 import Hero from "@/components/section/homeSection/Hero";
 import About from "@/components/section/homeSection/About";
 import Experience from "@/components/section/homeSection/Experience";
-import Blog from "@/components/section/homeSection/Blog";
+import Writing from "@/components/section/homeSection/Writing";
 import Projects from "@/components/section/homeSection/Projects";
 import Footer from "@/components/layout/main/Footer";
 import Contact from "@/components/section/homeSection/Contact";
@@ -14,8 +14,8 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
-        <Projects limit={2} />
-        <Blog />
+        <Projects limit={3} rule />
+        <Writing />
         <Contact />
         <Footer />
       </main>

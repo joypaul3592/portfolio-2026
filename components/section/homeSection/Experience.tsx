@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { EXPERIENCES } from "@/lib/data";
 import SectionHeading from "@/components/section/common/SectionHeading";
+import VerticalRule from "@/components/section/common/VerticalRule";
 import { ArrowRightIcon } from "@/components/Icons";
 
 export default function Experience() {
@@ -8,6 +9,9 @@ export default function Experience() {
 
   return (
     <section>
+      {/* Carries the hero's rule down past About, into the timeline */}
+      <VerticalRule className="mb-12 h-16 sm:mb-14 sm:h-20" />
+
       <SectionHeading title="Experience" meta="2022 — 2026" />
 
       <ul className="space-y-6">
