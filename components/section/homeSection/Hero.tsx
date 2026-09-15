@@ -27,7 +27,7 @@ export default function Hero() {
 
       {/* Photo card, centred on the cover's edge — a print with its caption */}
       <div className="relative -mt-24 mx-auto w-64 bg-paper/0 p-1.5 pb-6 text-center sm:-mt-28 sm:w-[21rem] backdrop-blur-[1.5px] ">
-        <div className=" ring-1 ring-paper-edge/30 rounded-lg">
+        <div className=" ring-1 ring-paper-edge/50 rounded-lg">
           <Image
             src={USER.avatar}
             alt={`${USER.displayName} — ${USER.jobTitle}`}
